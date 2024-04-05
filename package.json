@@ -3,16 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "tsx index.js",
-    "build": "tsc index.ts"
+    "run": "npm run build && node build/index.js",
+    "build": "node clean.mjs && tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "rimraf": "^5.0.5",
     "tsx": "^4.7.1",
     "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "nanoid": "^5.0.6"
   }
 }
